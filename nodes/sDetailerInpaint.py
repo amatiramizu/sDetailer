@@ -39,7 +39,7 @@ class SDetailerInpaintHelper:
     FUNCTION = "inpaint"
 
     @classmethod
-    def IS_CHANGED(cls, strength, guidance_scale, steps, scheduler, sampler_name, seed, mask_blur=4, **kwargs):
+    def IS_CHANGED(cls, strength, guidance_scale, steps, scheduler, sampler_name, seed, mask_blur, **kwargs):
         if seed == 0:
             return (strength, guidance_scale, steps, scheduler, sampler_name, random.randint(0, 0xffffffffffffffff), mask_blur)
         return (strength, guidance_scale, steps, scheduler, sampler_name, seed, mask_blur)
